@@ -1,0 +1,17 @@
+#define  SET_BIT_64(value, position) value |=0x0000000000000001<<position
+#define  CLEAR_BIT_64(value, position) value &=~(0x0000000000000001<<position)
+#define  SET_BIT_32(value, position) value |=0x00000001<<position
+#define  CLEAR_BIT_32(value, position) value &=~(0x00000001<<position)
+#define  SET_BIT_16(value, position) value |=0x0001<<position
+#define  CLEAR_BIT_16(value, position) value &=~(0x0001<<position)
+#define  SET_BIT_8(value, position) value |=0x01<<position
+#define  CLEAR_BIT_8(value, position) value &=~(0x01<<position)
+#define  CHECK_BIT_64( value, position) (value&(0x0000000000000001<<position))>>position
+#define  CHECK_BIT_DOES_NOT_EXIST_64( value, position) !(CHECK_BIT_64( value, position))
+#define  CHECK_BIT_32( value, position) (value&(0x00000001<<position))>>position
+#define  CHECK_BIT_DOES_NOT_EXIST_32( value, position) !(CHECK_BIT_32( value, position))
+#define  CHECK_BIT_16( value, position) (value&(0x0001<<position))>>position
+#define  CHECK_BIT_DOES_NOT_EXIST_16( value, position) !(CHECK_BIT_16( value, position))
+#define  CHECK_BIT_8(value, position) (value&(0x01<<position))>>position
+#define  CHECK_BIT_DOES_NOT_EXIST_8( value, position) !(CHECK_BIT_8( value, position))
+
